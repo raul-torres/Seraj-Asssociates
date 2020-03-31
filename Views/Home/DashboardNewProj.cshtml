@@ -1,0 +1,68 @@
+@model Project
+
+<head>
+<link rel="stylesheet" href="~/css/DashboardNewProj.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+<div id="mySidenav" class="sidenav playfair">
+  <a href="javascript:void(0)" class="closebtn menu-link-a" onclick="closeNav()">&times;</a>
+  
+  <a href="/dashboard" class="menu-link-a">Home</a>
+  <a href="/dashboard/portfolio" class="menu-link-a">Portfolio</a>
+  <a href="/dashboard/messages" class="menu-link-a">Messages</a>
+
+</div>
+<span class="text-white playfair menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<div class="container">
+
+  <div class="projpage text-center">
+    <h2 class="display-4 playfair">Lets add a new project</h2>
+    <a href="/dashboard/portfolio" class="btn btn-outline-warning playfair exit">Exit &#8594;</a>
+    <br>
+    <form action="/newproject" method="post" class="row">
+
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="form-group text-center">
+              <input type="text" class="form-control input1 fauna" asp-for="Name" placeholder="Project Name">
+              <span asp-validation-for="Name" class="validation-error"></span>
+          </div>
+          <div class="form-group text-center">
+              <textarea class="form-control input2 fauna" id="" cols="40" rows="10" asp-for="Description" placeholder="Description"></textarea>
+          </div>
+          @* <div class="file-field">
+            <div class="btn btn-transparent">
+              <span>Main Image</span>
+              <input type="file" asp-for="MainImage">
+              <span asp-validation-for="MainImage" class="validation-error"></span>
+            </div>
+          </div>
+           *@
+          <input type="submit" class="btn btn-transparent createbutton" value="Create">
+        </div>
+        
+        <div class="col-md-3"></div>
+    </form>
+    <br>
+    <br>
+    
+  
+  </div>
+
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "280px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>

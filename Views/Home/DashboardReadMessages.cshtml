@@ -1,0 +1,77 @@
+@model List<Message>
+
+<head>
+<link rel="stylesheet" href="~/css/DashboardReadMessages.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav playfair">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="/dashboard" class="block">Home</a>
+  	<a href="/dashboard/portfolio" class="block">Portfolio</a>
+	<span class="block">Messages</span>
+</div>
+<span class="icon text-white playfair" style="font-size:30px;cursor:pointer" onclick="openNav()"><b>&#9776; Menu</b></span>
+<br>
+<br>
+<br>
+<h1 class="title playfair display-4 text-center">Here are messages you already read</h1>
+<br>
+<center>
+<div class="jumbotron text-center scrollbar">
+
+	<a href="/dashboard/messages" class="unread btn btn-outline-secondary fauna">Back to Un-Read Messages</a>
+	<br>
+	<br>
+	<table class="table table-hover fauna">
+		<thead class="table-dark table-heading fauna">
+			<tr class="table-heading">
+				<th scope="col"> Name </th>
+				<th scope="col"> Email </th>
+				<th scope="col"> Phone Number </th>
+				<th scope="col"> Date Received </th>
+				<th scope="col"> Action </th>
+			</tr>
+		</thead>
+		<tbody>
+		
+			@{
+				
+				foreach(var M in Model)
+				{
+					if(M.IsRead == true)
+					{
+						<tr class="fauna info">
+							<td> @M.Name</td>
+							<td> @M.Email </td>
+							<td> @M.PhoneNumber </td>
+							<td> @M.CreatedAt </td>
+							<td>
+								<a href="messages/@M.MessageId" class="moreinfo btn btn-outline-info">info</a>
+									&nbsp;  &nbsp;
+								<a href="/deletemessage/@M.MessageId" class="MarkRead btn btn-outline-danger">DELETE</a>
+							</td>
+						</tr>
+					}
+				}
+			}
+		</tbody>
+	</table>
+</div>
+</center>
+
+<script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "280px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+   
+</body>

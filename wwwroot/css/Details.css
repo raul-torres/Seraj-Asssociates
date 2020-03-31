@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu a{
+    margin-right: 10%;
+    font-size: large;
+    text-decoration: none;
+    color: blue ;
+
+}
+    .menu a:first-child{
+        margin-left: 13%;
+
+}
+
+
+.mainimg
+{
+    width: 60%;
+    max-width: 60%;
+}
+
+
+.bio
+{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.justify
+{
+    text-align: justify;
+}
+
+.phototile{
+    margin-top: 20px;
+    
+}
+.phototile img
+{
+    width: 25%;
+    margin: 15px;
+}
+h3
+{
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    
+}
+
+body
+{
+    background-image: url("https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #464646;
+}
+
+.navbar{
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+}
+    .navbar:hover{
+        box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    }
+
+    .navbar-brand{
+        font-size: x-large;
+    }
+
+    
+
+
+

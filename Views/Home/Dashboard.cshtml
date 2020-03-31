@@ -1,0 +1,39 @@
+
+<head>
+<link rel="stylesheet" href="~/css/Dashboard.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div id="mySidenav" class="playfair sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <span>Home</span>
+  <a href="/dashboard/portfolio">Portfolio</a>
+  <a href="/dashboard/messages">Messages</a>
+  
+</div>
+<span class="icon playfair" style="font-size:30px;cursor:pointer" onclick="openNav()"><b>&#9776; Menu</b></span>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "280px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div id="main" class="welcome playfair">
+    <h1 class="display-4 text-center">Welcome, <strong>Rahman Seraj</strong></h1>
+</div>
+   
+</body>

@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-image: url(../Images/dashboardImage.jpeg);
+    background-size: cover;
+}
+
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;  
+top: 0;
+left: 0;
+background-color: rgba(32, 65, 77, 1.0);
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+border-right: 4px solid white;
+}
+
+.sidenav a, span {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: white;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav span{
+    color: red;
+}
+
+.sidenav a:hover {
+color: red;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+.icon{
+    width: 152px;
+    color: rgb(32, 65, 77);
+    transition: 0.3s;
+}
+.icon:hover{
+    color: red;
+}
+.footer{
+    color: white;
+}

@@ -1,0 +1,128 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+
+body
+{
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../Images/black.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+td{
+    color: white;
+}
+
+
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #2b2b2b;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+border-right: 4px solid white;
+}
+
+.sidenav a, span {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: white;
+transition: 0.3s;
+}
+    .block{
+        display: block;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        transition: 0.3s;
+    }
+.sidenav span{
+    color: red;
+}
+
+.sidenav a:hover {
+color: red;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+.jumbotron
+{
+    width: 80%;
+    background-color: transparent;
+    /* position: relative; */
+    /* overflow-y: auto; */
+    position: sticky;
+    /* color: white; */
+    white-space: nowrap;
+}
+
+.icon{
+    width: 152px;
+    transition: 0.3s;
+}
+    .icon:hover{
+        color: red;
+    }
+.scrollbar
+{
+    position: relative;
+    width: 80%;
+    height: 730px;
+    overflow: auto;
+}
+.read{
+    border: 2px solid white !important;
+    color: white !important;
+}
+    .read:hover{
+        color: lightblue !important;
+    }
+.heading{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+    .heading:hover{
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+.info{
+    background-color: rgba(161, 161, 161, 0.3);
+}
+.moreinfo{
+    color: white !important;
+    border: 2px solid white !important;
+
+}
+.moreinfo:hover{
+    background-color: gray !important;
+    color: white !important;
+
+}
+.MarkRead{
+    color: white !important;
+    border: 2px solid white !important;
+}
+.MarkRead:hover{
+    background-color: gray !important;
+    color: white !important;
+}

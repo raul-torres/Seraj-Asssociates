@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../Images/abstract.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: gray;
+}
+.text-light{
+    color: white !important;
+}
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #33373D;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+border-right: 4px solid white;
+}
+.sidenav a, span {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    }
+    .sidenav span{
+        color: red;
+    }
+    .sidenav a:hover {
+    color: red;
+    }
+.icon{
+    width: 12%;
+    transition: 0.3s;
+}
+    .icon:hover{
+        color: red !important;
+    }
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+.jumbotron{
+    width: 1500px;
+    max-width: 100%;
+    min-height: 900px;
+    background-color: transparent;
+    overflow: auto;
+    transition: 0.3s ease-in-out;
+    margin: 0 auto;
+}
+.portpage:hover{
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+}
+img
+{
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    border-radius: 10px;
+    align-content: center;
+}
+.button-photos{
+    border: 2px solid white;
+}
+    .button-photos:hover{
+        border: 2px solid rgb(80, 80, 243);
+        color: white;
+        background-color: rgba(75, 75, 75, 0.8);
+    }
+.button-edit{
+    border: 2px solid white;
+}
+    .button-edit:hover{
+        border: 2px solid yellow;
+        color: white;
+        background-color: rgba(75, 75, 75, 0.8);
+    }
+.button-delete{
+    border: 2px solid white;
+}
+    .button-delete:hover{
+        border: 2px solid red;
+        color: white;
+        background-color: rgba(128, 0, 0, 0.8);
+    }
+  .portpage #deletebutton:hover {
+    color: white;
+    background-color: red;
+  }
+.project-container{
+    margin-right: 2%;
+    margin-left: 3%;
+    display: inline-block;
+    width: 400px;
+    max-width: 100%;
+    height: 450px;
+    max-height: 100%;
+    color: white;
+}
+.project-container:first-of-type{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.project-container:nth-child(3n){
+    margin-right: 0;
+}
+.read{
+    border: 2px solid white !important;
+    color: white !important;
+}
+    .read:hover{
+        color: lightblue !important;
+    }

@@ -1,0 +1,78 @@
+body{
+    color: white !important;
+}
+.btn-transparent {
+    background: transparent;
+    color: #F2F2F2;
+    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+    border: 2px solid white;
+    text-shadow: 0px 0px 4px #000;
+    font-family: 'Fauna One', serif;
+
+}
+
+    .btn-transparent:hover {
+        color: white;
+        background-color: rgba(255,255,255,0.2);
+    }
+
+.jumbotron{
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgba(124, 165, 192, 0.5);
+}
+.btn{
+    color: white !important;
+    border: 2px solid white !important;
+    transition: 0.3s !important;
+}
+    .btn:hover{
+        color: white !important;
+        border: 2px solid rgb(255, 208, 0) !important;
+
+    }
+.secondTitle{
+    font-size: 1.5rem !important;
+}
+.fileAdder{
+    border: none !important;
+}
+    .fileAdder:hover{
+        border: 2px solid rgb(23, 178, 230) !important;
+        color: rgb(23, 178, 230) !important;
+    }
+.ProjectName{
+    color: rgb(23, 178, 230) !important;
+    display: inline-block;
+}
+.pictures{
+    display: inline-block;
+    margin-right: 2%;
+    margin-top: 2%;
+    width:  400px;
+    height: 270px;
+    background-size: cover;
+}
+.createbutton:hover{
+    border: 2px solid rgb(23, 178, 230) !important;
+    color: white !important;
+}
+.optionsdiv{
+    display: block;
+}
+    .imageRemove:hover{
+        border: 2px solid rgb(247, 114, 114) !important;
+        background-color: red !important;
+    }
+    .imageSet:hover{
+        border: 2px solid rgb(23, 178, 230) !important;
+        background-color: rgba(156, 156, 156, 0.5) !important;
+    }
+.picturediv{
+    display: inline-block;
+    margin-right: 2%;
+    margin-top: 2%;
+}

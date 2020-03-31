@@ -1,0 +1,53 @@
+@model List<Project>
+
+<head>
+<link rel="stylesheet" href="~/css/DashboardPortfolio.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+<div id="mySidenav" class="sidenav playfair">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/dashboard">Home</a>
+  <span>Portfolio</span>
+  <a href="/dashboard/messages">Messages</a>
+</div>
+<span class="icon text-left text-light playfair" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<h1 class="text-center playfair display-4 text-light">Here are all your projects</h1>
+
+<div class="jumbotron playfair">
+  
+  @* REDIRECT TO NEW PROJECT FORM *@
+  <div class="text-center">
+    <a href="/dashboard/newproj" class="text-center read btn btn-outline-secondary fauna">Add New Project</a>
+  </div>
+  <br>
+	<br>
+  @{
+    foreach(var P in Model)
+    {
+      <div class="project-container text-center">
+        <span class="text-center">@P.Name</span>
+        <img src="https://www.interiorzine.com/wp-content/uploads/2017/11/50-small-studio-apartment-design-ideas-modern-tiny-clever.jpg">
+        <a href="/dashboard/photos/@P.ProjectId" class="button-photos btn btn-transparent btn-sm" id="editbutton">Photos</a>  
+        <a href="/dashboard/editproj/@P.ProjectId" class="button-edit btn btn-transparent btn-sm" id="editbutton">Edit</a>  
+        <a href="/deleteproject/@P.ProjectId" class="button-delete btn btn-transparent btn-sm" id="deletebutton">Delete</a>       
+      </div>
+    }
+  }
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "280px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+   
+

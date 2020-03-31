@@ -1,0 +1,67 @@
+body{
+    background-image: url("https://images.pexels.com/photos/271667/pexels-photo-271667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-color: lightgray;
+    background-blend-mode: screen;
+}
+.navbar-brand{
+    font-size: x-large;
+}
+.navbar{
+    transition: 0.3s ease-in-out;
+    background-color: rgba(202, 202, 202, 0.5);
+}
+    .navbar:hover{
+        box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    }
+.quote{
+    display: inline-block;
+    font-size: medium;
+    font-style: italic;
+}
+.active{
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.menu a{
+    margin-right: 10%;
+    font-size: large;
+    text-decoration: none;
+    color: blue;
+}
+    .menu a:first-child{
+        margin-left: 13%;
+    }
+.RahmanSeraj{
+    width: 610px;
+    max-width: 90%;
+}
+.jumbotron{
+    text-shadow: white 0px 0px 10px;
+    margin: 0 auto;
+    width: 900px;
+    max-width: 100%;
+    max-height: 100%;
+    color: black;
+    background-color: rgba(202, 202, 202, 0.5);
+    transition: 0.3s ease-in-out;
+    
+}
+    .jumbotron:hover{
+        box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    }
+.RahmanSeraj{
+    text-align: justify;
+    display: inline-block;
+    width: 610px;
+    margin: 10px;  
+}
+img{
+    width: 170px;
+    vertical-align: top;
+    border-radius: 10px;
+}
+.text-dark{
+    text-shadow: 0px 0px 4px white;
+}

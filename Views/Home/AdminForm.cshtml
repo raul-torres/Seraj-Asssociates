@@ -1,0 +1,25 @@
+@model Admin
+
+<head>
+    <link rel="stylesheet" href="~/css/AdminForm.css" />
+</head>
+<br>
+<h1 class="display-4 playfair text-center">Let's create your account</h1>
+<div class="jumbotron text-center">
+    <form action="/admincreator" method="post" class="fauna">
+        <span asp-validation-for="LoginName" class="errormessage text-left"></span>
+        <input asp-for="LoginName" class="form-control input" placeholder="Add a login name">
+        <span asp-validation-for="Password" class="errormessage text-left"></span>
+        <input asp-for="Password" class="form-control input password" placeholder="Create your password">
+        <ul class="text-left">
+            <li class="requirements">Password must be 8 characters long</li>
+            <li class="requirements">Must contain atleast 1 number</li>
+            <li class="requirements">Must contain atleast 1 letter</li>
+            <li class="requirements">Must contain atleast 1 special character</li>
+        </ul>
+        <span asp-validation-for="ConfirmedPassword" class="errormessage text-left"></span>
+        <input asp-for="ConfirmedPassword" class="form-control input" placeholder="Confirm your passsword">
+        <input type="submit" value="Create" class="createbtn btn btn-outline-primary">
+    </form>
+
+</div>

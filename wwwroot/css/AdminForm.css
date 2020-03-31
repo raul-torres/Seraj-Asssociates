@@ -1,0 +1,47 @@
+body
+{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../Images/dark.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+.jumbotron{
+    margin: 0 auto;
+    background-color: transparent;
+    width: 70%;
+}
+.input{
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    margin-bottom: 5%;
+}
+    .input::placeholder{
+        color: white;
+    }
+    .input:focus{
+        background-color: transparent;
+        color: white;
+    }
+    .password{
+        margin-bottom: 1%;
+    }
+.createbtn{
+    color: white !important;
+    border: 2px solid white !important;
+}
+    .createbtn:hover{
+        color: white !important;
+        border: 2px solid blue;
+        background-color: rgba(44, 106, 199, 0.5) !important;
+    }
+.requirements{
+    font-size: x-small;
+    color: wheat;
+}
+.errormessage{
+    color: red;
+    font-size: x-small;
+}

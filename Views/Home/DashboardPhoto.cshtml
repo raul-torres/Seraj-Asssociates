@@ -1,0 +1,72 @@
+@model Image
+
+<head>
+<link rel="stylesheet" href="~/css/DashboardPhoto.css" />
+<link rel="stylesheet" href="~/css/DashboardPortfolio.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+<div id="mySidenav" class="sidenav playfair">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/dashboard">Home</a>
+  <span>Portfolio</span>
+  <a href="/dashboard/messages">Messages</a>
+</div>
+<center>
+</center>
+<span class="playfair icon" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "280px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<br>
+<div class="jumbotron text-center fauna">
+  <h3 class="display-4 text-light playfair">Let's add some images</h3>
+    <a href="/dashboard/portfolio" class="btn btn-outline-warning btn-sm">&#8592; Go Back</a>
+  <br>
+  <br>
+  <form action="/uploadimage/@ViewBag.ThisProject.ProjectId" method="post" enctype="multipart/form-data">
+    <div class="file-field">
+      <br>
+      <br>
+      <div class="btn btn-transparent fileAdder">
+        <input type="file" name="user_image" id="user_image">
+        <br>
+        <span asp-validation-for="Path" class="error"></span>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="text-center">
+      <input type="submit" class="btn btn-transparent createbutton" value="Upload">
+    </div>
+  </form>
+  <br>
+  <br>
+  @{
+    if(@ViewBag.ThisProject.Album.Count == 0)
+    {
+      
+    } else{
+      <p class="playfair secondTitle">Here are the current images for your <bold class="ProjectName secondTitle">@ViewBag.ThisProject.Name</bold> project</p>
+        foreach(var i in @ViewBag.ThisProject.Album)
+          {
+            <div class="picturediv">
+              <img src='@Url.Content(@i.Path)' alt="@i.Path" class="pictures">
+              <div class="optionsdiv">
+                <a href="/setascover/@i.ImageId" class="imageSet btn btn-outline-transparent btn-sm">Set as cover</a>
+                <a href="" class="imageRemove btn btn-outline-transparent btn-sm">Remove</a>
+              </div>
+            </div>
+          }
+    }
+  }
+</div>

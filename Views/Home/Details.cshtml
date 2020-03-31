@@ -1,0 +1,165 @@
+<head>
+    <link rel="stylesheet" href="~/css/Details.css" />
+    
+</head>
+
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark transparent">
+  <a class="navbar-brand text-dark" href="#">Seraj Associates</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/">
+          <i class="fab"></i> Home
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-danger" href="/portfolio">
+          <i class="fab"></i>Back To Portfolio</a>
+          <span class="sr-only">(current)</span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/about">
+          <i class="fab"></i> About</a>
+      </li><li class="nav-item">
+        <a class="nav-link text-dark" href="/contact">
+          <i class="fab"></i> Contact</a>
+      </li>
+      @* <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i> Profile </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+          <a class="dropdown-item" href="#">My account</a>
+          <a class="dropdown-item" href="#">Log out</a>
+        </div>
+      </li> *@
+    </ul>
+  </div>
+</nav>
+<br>
+<div class="details text-center">
+        
+    <br>
+    
+    <div class="bio">
+        <h3>WASHINGTON D.C.</h3>
+        @* <br> *@
+        <p class="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laborum consectetur ad amet velit reiciendis voluptatum distinctio, eveniet voluptatem est aliquid cumque cum architecto doloribus praesentium dolorum quam odit labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vero minus quidem quos provident tempore vitae consequuntur, ratione, explicabo quo assumenda nulla modi excepturi labore earum maxime fugiat eaque temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus autem nisi ipsa expedita debitis natus ducimus ratione asperiores vero provident nihil accusantium, illo veniam! Qui soluta sapiente aut itaque placeat.</p>
+    </div>
+    <head>
+    <link rel="stylesheet" href="~/css/TESTING.css" />
+</head>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += "active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+
+<br>
+<br>
+<br>
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides active" style="display: block;">
+    <div class="numbertext">1 / 6</div>
+      <img src="../Images/photo1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="../Images/photo2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="../Images/photo3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="../Images/photo4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="../Images/photo5.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="../Images/photo6.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="../Images/photo1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/photo2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/photo3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/photo4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/photo5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/photo6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+
+
+</div>
+

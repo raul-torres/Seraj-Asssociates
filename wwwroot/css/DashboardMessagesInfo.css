@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../Images/blur.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    color: white;
+}
+
+.jumbotron{
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgba(223, 223, 223, 0.5);
+    transition: 0.3s ease-in-out; 
+    color: black !important; 
+}
+    .jumbotron:hover{
+        box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    }
+.btn{
+    color: white !important;
+    border: 2px solid white !important;
+    transition: 0.3s !important;
+}
+    .btn:hover{
+        color: rgb(255, 208, 0) !important;
+        border: 2px solid rgb(255, 208, 0) !important;
+
+    }
+.delete{
+    color: black !important;
+    border: 2px solid black !important;
+}
+    .delete:hover{
+        background-color: red !important;
+        color: white !important;
+        border: 2px solid rgb(128, 4, 4) !important;
+    }
+.MarkRead{
+    color: black !important;
+    border: 2px solid black !important;
+}
+    .MarkRead:hover{
+        color: white !important;
+    }
